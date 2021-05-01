@@ -326,7 +326,7 @@ namespace AntDesign
             }
 
             _selectedFilterValues = Filters.Where(x => x.Selected).Select(x => x.Value.ToString()).ToArray();
-            StateHasChanged();
+            //StateHasChanged();
         }
 
         private void FilterConfirm(bool isReset = false)
@@ -338,6 +338,7 @@ namespace AntDesign
 
             Table?.ReloadAndInvokeChange();
         }
+
 
         private void ResetFilters()
         {

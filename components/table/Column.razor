@@ -260,7 +260,11 @@ readonly RenderFragment<Column<TData>> FilterToolTipSorter = col =>
                                         @if (col._columnDataType == typeof(DateTime))
                                         {
                                             <DatePicker  Value="col.FilterDateTimeValue(filter)" Format="@col.Format" TValue="DateTime?" @attributes="@(new Dictionary<string, object>() { ["ValueChanged"] = _callbackFactory.Create<DateTime?>(col, value => col.SetFilterValue(filter,value)) })" PopupContainerSelector="@("#popupSelForValue" + col.Id)"></DatePicker>
+<<<<<<< HEAD
                                             <div id="@("popupSelForValue" + col.Id)" style="position:relative!important" ></div>
+=======
+                                            <div id="@("popupSelForValue" + col.Id)" ></div>
+>>>>>>> 3b5b8962 (tablefilter-moreoptions)
                                         }
                                         else
                                         {
